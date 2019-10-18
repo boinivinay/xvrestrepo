@@ -1,0 +1,37 @@
+{% load static %}
+<html>
+<head>
+ <title></title>
+ <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+ <script src="{% static '/js/jquery-3.4.1.min.js' %}" type="text/javascript"></script>
+ <script>
+    $(document).ready(function () {
+    alert("Hurray JQuery is working");
+    });
+    </script>
+
+</head>
+<body style="background-color:rgb(170, 121, 121);">
+
+
+
+ <div class="logoContainer">
+    <img class="logo" src="{% static '/images/logo.png' %}" />
+    </div>
+    <div class="margin">
+    <a href="/">Home</a> | <a href="{% url 'aboutus' %}">About Us</a> | <a
+   href="{% url 'contactus' %}">Contact Us</a>
+    </div>
+ {% block content %}
+ {% endblock %}
+ <div class="footerContentOuterWrapper">
+ <div class="footerSectionWrapper">
+ <div class="footerSection" style="color:rgb(149, 188, 233)">
+ 2019 All rights reserved | XcelVations
+ </div>
+ </div>
+ </div>
+
+
+</body>
+</html>
